@@ -13,7 +13,7 @@ This repository implements a graph pooling operator to either coarsen the graph 
 	        \mathbf{A} \cdot \mathrm{softmax}(\mathbf{S})
 
 ```
-where $\mathbf{X} \in \mathbb{R}^{N \times F}$ is the node feature matrix of the input graph, $\tilde{A}$ = $\mathbf{D}^{\frac{-1}{2}}\mathbf{AD}^{\frac{-1}{2}}$ is symmetrically normalized adjacency matrix, $\mathbf{A} \in \mathbb{R}^{N \times N}$ is the adjacency matrix of the input graph, \mathbf{D} = diag(\mathbf{A}$1_N$) is the degree matrix, and $\mathbf{S} \in \mathbb{R}^{BS \times N \times C}$ is the dense learned assignment matrix. The following losses are being used to implement graph clustering and pooling operations:
+where $\mathbf{X} \in \mathbb{R}^{N \times F}$ is the node feature matrix of the input graph, $\tilde{A}$ = $\mathbf{D}^{\frac{-1}{2}}\mathbf{AD}^{\frac{-1}{2}}$ is symmetrically normalized adjacency matrix, $\mathbf{A} \in \mathbb{R}^{N \times N}$ is the adjacency matrix of the input graph, $\mathbf{D} = diag(\mathbf{A}1_N)$ is the degree matrix, and $\mathbf{S} \in \mathbb{R}^{BS \times N \times C}$ is the dense learned assignment matrix. The following losses are being used to implement graph clustering and pooling operations:
 
 ***Spectral Loss:***
 ```math
@@ -38,7 +38,7 @@ where $\mathbf{B}$ is the modularity matrix of the input graph with degree d and
 	        {\left\|\sum_i\mathbf{S_i}^{\top}\right\|}_F - 1
 
 ```
-where N is the number of nodes, F is the number of node features, BS is the Batch Size, C is the number of clusters, and $\mathbf{B}$ is the modularity matrix of the input graph with degree d and m no. of edges. More in-depth information about this implementation can be found on [PyTorch Geometric Official Website](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.dense.DMoNPooling.html#torch_geometric.nn.dense.DMoNPooling).
+where N is the number of nodes, F is the number of node features, BS is the Batch Size, C is the number of clusters. More in-depth information about this implementation can be found on [PyTorch Geometric Official Website](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.dense.DMoNPooling.html#torch_geometric.nn.dense.DMoNPooling).
 
 ## Requirements
 -	`math`
