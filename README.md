@@ -38,7 +38,7 @@ where $\mathbf{B}$ is the modularity matrix of the input graph with degree d and
 	        {\left\|\sum_i\mathbf{S_i}^{\top}\right\|}_F - 1
 
 ```
-where N is the number of nodes, F is the number of node features, BS is the Batch Size, C is the number of clusters. More in-depth information about this implementation can be found on [PyTorch Geometric Official Website](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.dense.DMoNPooling.html#torch_geometric.nn.dense.DMoNPooling).
+where N is the number of nodes, F is the number of node features, BS is the Batch Size, C is the number of clusters. More in-depth information about this implementation can be found on [***PyTorch Geometric Official Website***](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.dense.DMoNPooling.html#torch_geometric.nn.dense.DMoNPooling).
 
 ## Requirements
 -	`math`
